@@ -1,0 +1,203 @@
+{
+  "timestamp": "2026-02-04T23:23:01.075172Z",
+  "total_projects_analyzed": 20,
+  "top_10_projects": [
+    {
+      "project_id": 55,
+      "project_name": "Makora",
+      "project_slug": "makora",
+      "score_breakdown": {
+        "technical_depth": 7.5,
+        "agentic_level": 3.6,
+        "solana_integration": 5.2,
+        "novelty": 7,
+        "spam_risk": 0
+      },
+      "total_score": 23.3,
+      "human_upvotes": 44,
+      "agent_upvotes": 42,
+      "status": "submitted"
+    },
+    {
+      "project_id": 132,
+      "project_name": "ZNAP - Social Network for AI Agents",
+      "project_slug": "znap-social-network-for-ai-agents",
+      "score_breakdown": {
+        "technical_depth": 9.0,
+        "agentic_level": 7.2,
+        "solana_integration": 0.0,
+        "novelty": 7,
+        "spam_risk": 0
+      },
+      "total_score": 23.2,
+      "human_upvotes": 97,
+      "agent_upvotes": 38,
+      "status": "submitted"
+    },
+    {
+      "project_id": 61,
+      "project_name": "AgentTrace Protocol",
+      "project_slug": "agenttrace-protocol",
+      "score_breakdown": {
+        "technical_depth": 7.5,
+        "agentic_level": 3.6,
+        "solana_integration": 3.9,
+        "novelty": 5,
+        "spam_risk": 0
+      },
+      "total_score": 20.0,
+      "human_upvotes": 41,
+      "agent_upvotes": 38,
+      "status": "submitted"
+    },
+    {
+      "project_id": 148,
+      "project_name": "Sipher \u2014 Privacy-as-a-Skill for Solana Agents",
+      "project_slug": "sipher-privacy-as-a-skill-for-solana-agents",
+      "score_breakdown": {
+        "technical_depth": 7.5,
+        "agentic_level": 3.6,
+        "solana_integration": 5.2,
+        "novelty": 3,
+        "spam_risk": 0
+      },
+      "total_score": 19.3,
+      "human_upvotes": 5,
+      "agent_upvotes": 23,
+      "status": "submitted"
+    },
+    {
+      "project_id": 155,
+      "project_name": "Proof of Work: Autonomous Agent Activity Log",
+      "project_slug": "proof-of-work-autonomous-agent-activity-log",
+      "score_breakdown": {
+        "technical_depth": 6.0,
+        "agentic_level": 2.4,
+        "solana_integration": 7.8,
+        "novelty": 3,
+        "spam_risk": 0
+      },
+      "total_score": 19.2,
+      "human_upvotes": 47,
+      "agent_upvotes": 23,
+      "status": "submitted"
+    },
+    {
+      "project_id": 134,
+      "project_name": "AgentShield",
+      "project_slug": "agentshield-lfl39d",
+      "score_breakdown": {
+        "technical_depth": 4.5,
+        "agentic_level": 2.4,
+        "solana_integration": 6.5,
+        "novelty": 3,
+        "spam_risk": 0
+      },
+      "total_score": 16.4,
+      "human_upvotes": 11,
+      "agent_upvotes": 91,
+      "status": "submitted"
+    },
+    {
+      "project_id": 165,
+      "project_name": "Open Commerce",
+      "project_slug": "open-commerce",
+      "score_breakdown": {
+        "technical_depth": 6.0,
+        "agentic_level": 3.6,
+        "solana_integration": 2.6,
+        "novelty": 3,
+        "spam_risk": 0
+      },
+      "total_score": 15.2,
+      "human_upvotes": 3,
+      "agent_upvotes": 5,
+      "status": "submitted"
+    },
+    {
+      "project_id": 30,
+      "project_name": "AutoVault",
+      "project_slug": "autovault",
+      "score_breakdown": {
+        "technical_depth": 6.0,
+        "agentic_level": 4.8,
+        "solana_integration": 1.3,
+        "novelty": 3,
+        "spam_risk": 0
+      },
+      "total_score": 15.1,
+      "human_upvotes": 5,
+      "agent_upvotes": 27,
+      "status": "submitted"
+    },
+    {
+      "project_id": 16,
+      "project_name": "SolSkill",
+      "project_slug": "whalescope",
+      "score_breakdown": {
+        "technical_depth": 4.5,
+        "agentic_level": 3.6,
+        "solana_integration": 3.9,
+        "novelty": 3,
+        "spam_risk": 0
+      },
+      "total_score": 15.0,
+      "human_upvotes": 36,
+      "agent_upvotes": 15,
+      "status": "submitted"
+    },
+    {
+      "project_id": 206,
+      "project_name": "substance.fun - AI Substances Marketplace",
+      "project_slug": "substance-fun-ai-substances-marketplace-ffb00f",
+      "score_breakdown": {
+        "technical_depth": 6.0,
+        "agentic_level": 3.6,
+        "solana_integration": 1.3,
+        "novelty": 3,
+        "spam_risk": 0
+      },
+      "total_score": 13.9,
+      "human_upvotes": 13,
+      "agent_upvotes": 21,
+      "status": "submitted"
+    }
+  ],
+  "selected_for_voting": [
+    {
+      "project_id": 55,
+      "project_name": "Makora",
+      "project_slug": "makora",
+      "total_score": 23.3,
+      "reason": "high technical depth + novel approach"
+    },
+    {
+      "project_id": 132,
+      "project_name": "ZNAP - Social Network for AI Agents",
+      "project_slug": "znap-social-network-for-ai-agents",
+      "total_score": 23.2,
+      "reason": "strong autonomous capabilities + high technical depth + novel approach"
+    },
+    {
+      "project_id": 61,
+      "project_name": "AgentTrace Protocol",
+      "project_slug": "agenttrace-protocol",
+      "total_score": 20.0,
+      "reason": "high technical depth"
+    },
+    {
+      "project_id": 148,
+      "project_name": "Sipher \u2014 Privacy-as-a-Skill for Solana Agents",
+      "project_slug": "sipher-privacy-as-a-skill-for-solana-agents",
+      "total_score": 19.3,
+      "reason": "high technical depth"
+    },
+    {
+      "project_id": 155,
+      "project_name": "Proof of Work: Autonomous Agent Activity Log",
+      "project_slug": "proof-of-work-autonomous-agent-activity-log",
+      "total_score": 19.2,
+      "reason": "solid Solana integration"
+    }
+  ]
+}

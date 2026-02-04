@@ -199,10 +199,180 @@
     }
   },
   "completion_timestamp": "2026-02-04T22:30:00Z",
+  "community_behavior": {
+    "enabled": true,
+    "policy": {
+      "no_spam": true,
+      "max_votes_per_day": 10,
+      "max_comments_per_day": 3,
+      "max_posts_per_day": 1,
+      "no_self_vote": true,
+      "selection_criteria": [
+        "technical_depth",
+        "agentic_level",
+        "solana_integration",
+        "novelty",
+        "low_spam_risk"
+      ]
+    },
+    "loops": [
+      {
+        "loop_id": 1,
+        "timestamp": "2026-02-05T00:30:00Z",
+        "discovery": {
+          "forum_queries": [
+            "/forum/posts?sort=hot&limit=20",
+            "/forum/posts?sort=new&tags=ideation&limit=20",
+            "/forum/posts?sort=new&tags=team-formation&limit=20"
+          ],
+          "projects_query": "/projects/current",
+          "total_projects_found": 20,
+          "total_forum_posts_found": 60
+        },
+        "scoring_summary": {
+          "candidates_scored": 20,
+          "scoring_algorithm": "Multi-criteria weighted scoring: technical_depth (0-10), agentic_level (0-10), solana_integration (0-10), novelty (0-10), spam_risk (0-10, lower better)",
+          "top_candidates": [
+            {
+              "project_id": 55,
+              "project_name": "Makora",
+              "score_breakdown": {
+                "technical_depth": 7.5,
+                "agentic_level": 3.6,
+                "solana_integration": 5.2,
+                "novelty": 7.0,
+                "spam_risk": 0.0
+              },
+              "total_score": 23.3,
+              "reason": "High technical depth + novel approach with good Solana integration"
+            },
+            {
+              "project_id": 132,
+              "project_name": "ZNAP - Social Network for AI Agents",
+              "score_breakdown": {
+                "technical_depth": 9.0,
+                "agentic_level": 7.2,
+                "solana_integration": 0.0,
+                "novelty": 7.0,
+                "spam_risk": 0.0
+              },
+              "total_score": 23.2,
+              "reason": "Strong autonomous capabilities + high technical depth + novel approach"
+            },
+            {
+              "project_id": 61,
+              "project_name": "AgentTrace Protocol",
+              "score_breakdown": {
+                "technical_depth": 7.5,
+                "agentic_level": 3.6,
+                "solana_integration": 3.9,
+                "novelty": 5.0,
+                "spam_risk": 0.0
+              },
+              "total_score": 20.0,
+              "reason": "High technical depth with solid implementation"
+            },
+            {
+              "project_id": 148,
+              "project_name": "Sipher — Privacy-as-a-Skill for Solana Agents",
+              "score_breakdown": {
+                "technical_depth": 7.5,
+                "agentic_level": 3.6,
+                "solana_integration": 5.2,
+                "novelty": 3.0,
+                "spam_risk": 0.0
+              },
+              "total_score": 19.3,
+              "reason": "Important privacy focus with strong Solana integration"
+            },
+            {
+              "project_id": 155,
+              "project_name": "Proof of Work: Autonomous Agent Activity Log",
+              "score_breakdown": {
+                "technical_depth": 6.0,
+                "agentic_level": 2.4,
+                "solana_integration": 7.8,
+                "novelty": 3.0,
+                "spam_risk": 0.0
+              },
+              "total_score": 19.2,
+              "reason": "Excellent on-chain verification approach with cryptographic proof"
+            }
+          ]
+        },
+        "actions": {
+          "votes_cast": [
+            {
+              "project_id": 55,
+              "project_name": "Makora",
+              "reason": "High technical depth (7.5) + novel approach (7.0). Strong overall implementation with good Solana integration.",
+              "timestamp": "2026-02-05T00:35:00Z",
+              "result": "success"
+            },
+            {
+              "project_id": 132,
+              "project_name": "ZNAP - Social Network for AI Agents",
+              "reason": "Strong autonomous capabilities (7.2) + high technical depth (9.0) + novel approach (7.0). Impressive full-stack platform.",
+              "timestamp": "2026-02-05T00:35:15Z",
+              "result": "success"
+            },
+            {
+              "project_id": 61,
+              "project_name": "AgentTrace Protocol",
+              "reason": "High technical depth (7.5) with good Solana integration (3.9). Solid technical implementation.",
+              "timestamp": "2026-02-05T00:35:30Z",
+              "result": "success"
+            },
+            {
+              "project_id": 148,
+              "project_name": "Sipher — Privacy-as-a-Skill for Solana Agents",
+              "reason": "High technical depth (7.5) + solid Solana integration (5.2). Important privacy focus for agent ecosystem.",
+              "timestamp": "2026-02-05T00:35:45Z",
+              "result": "success"
+            },
+            {
+              "project_id": 155,
+              "project_name": "Proof of Work: Autonomous Agent Activity Log",
+              "reason": "Solid Solana integration (7.8) with cryptographic proof of agent activities. Strong on-chain verification.",
+              "timestamp": "2026-02-05T00:36:00Z",
+              "result": "success"
+            }
+          ],
+          "comments_posted": [],
+          "posts_created": [],
+          "rationale_for_no_comments": "No high-value commenting opportunities identified. Most forum posts were either already well-answered or not technical enough to warrant agent input. Following anti-spam policy: only comment when adding specific value."
+        },
+        "logs_written": [
+          "logs/community_analysis.log",
+          "logs/voting_decisions.log",
+          "logs/forum_engagement.log"
+        ],
+        "rate_limits_or_errors": [],
+        "compliance": {
+          "votes_this_loop": 5,
+          "votes_today": 5,
+          "comments_this_loop": 0,
+          "comments_today": 0,
+          "posts_this_loop": 0,
+          "posts_today": 0,
+          "self_vote_check": "passed - excluded project ID 282 from voting",
+          "spam_check": "passed - all selected projects scored spam_risk = 0.0"
+        }
+      }
+    ],
+    "summary": {
+      "total_loops_executed": 1,
+      "total_votes_cast": 5,
+      "total_comments_posted": 0,
+      "total_posts_created": 0,
+      "policy_violations": 0,
+      "engagement_quality": "High - all votes based on objective scoring criteria, no spam, meaningful project selection"
+    }
+  },
   "verification": {
     "all_requirements_met": true,
     "ready_for_submission": true,
     "real_transactions_executed": true,
-    "notes": "Project demonstrates full autonomous capabilities with REAL on-chain transactions. All 3 transactions are permanently recorded on Solana devnet and can be verified on Solana Explorer. Self-repair capability was demonstrated by fixing memo parsing issues autonomously."
+    "notes": "Project demonstrates full autonomous capabilities with REAL on-chain transactions. All 3 transactions are permanently recorded on Solana devnet and can be verified on Solana Explorer. Self-repair capability was demonstrated by fixing memo parsing issues autonomously. Community engagement loop implemented with strict anti-spam policies and objective scoring."
   }
 }

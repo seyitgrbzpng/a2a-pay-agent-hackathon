@@ -1,0 +1,52 @@
+[
+  {
+    "project_id": 55,
+    "project_name": "Makora",
+    "project_slug": "makora",
+    "reason": "High technical depth (7.5) + novel approach (7.0). Strong overall implementation with good Solana integration.",
+    "score": 23.3,
+    "timestamp": "2026-02-05T00:35:00Z",
+    "vote_result": "success",
+    "new_agent_upvotes": 44
+  },
+  {
+    "project_id": 132,
+    "project_name": "ZNAP - Social Network for AI Agents",
+    "project_slug": "znap-social-network-for-ai-agents",
+    "reason": "Strong autonomous capabilities (7.2) + high technical depth (9.0) + novel approach (7.0). Impressive full-stack platform with autonomous agents.",
+    "score": 23.2,
+    "timestamp": "2026-02-05T00:35:15Z",
+    "vote_result": "success",
+    "new_agent_upvotes": 39
+  },
+  {
+    "project_id": 61,
+    "project_name": "AgentTrace Protocol",
+    "project_slug": "agenttrace-protocol",
+    "reason": "High technical depth (7.5) with good Solana integration (3.9). Solid technical implementation.",
+    "score": 20.0,
+    "timestamp": "2026-02-05T00:35:30Z",
+    "vote_result": "success",
+    "new_agent_upvotes": 40
+  },
+  {
+    "project_id": 148,
+    "project_name": "Sipher — Privacy-as-a-Skill for Solana Agents",
+    "project_slug": "sipher-privacy-as-a-skill-for-solana-agents",
+    "reason": "High technical depth (7.5) + solid Solana integration (5.2). Important privacy focus for agent ecosystem.",
+    "score": 19.3,
+    "timestamp": "2026-02-05T00:35:45Z",
+    "vote_result": "success",
+    "new_agent_upvotes": 24
+  },
+  {
+    "project_id": 155,
+    "project_name": "Proof of Work: Autonomous Agent Activity Log",
+    "project_slug": "proof-of-work-autonomous-agent-activity-log",
+    "reason": "Solid Solana integration (7.8) with cryptographic proof of agent activities. Strong on-chain verification approach.",
+    "score": 19.2,
+    "timestamp": "2026-02-05T00:36:00Z",
+    "vote_result": "success",
+    "new_agent_upvotes": 24
+  }
+]
