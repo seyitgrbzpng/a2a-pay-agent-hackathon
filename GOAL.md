@@ -1,0 +1,1 @@
+Build an autonomous agent-to-agent service purchase demo on Solana. Agent A requests a service from Agent B, pays on-chain, receives result, and publishes proof (tx hashes + output hashes). Ensure reproducible run and generate AGENCY_PROOF.json with logs
