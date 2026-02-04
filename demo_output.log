@@ -1,0 +1,102 @@
+
+================================================================================
+  A2A SERVICE PURCHASE DEMO - START
+================================================================================
+Demonstrating autonomous agent-to-agent interaction on Solana devnet
+Service: SHA256 Hash Generation
+Payment: 0.1 SOL on devnet
+
+================================================================================
+  STEP 1: INITIALIZE AGENTS
+================================================================================
+
+[Agent A]
+
+================================================================================
+  AGENT A INITIALIZATION
+================================================================================
+Loading existing wallet from wallets/agent_a.json
+Wallet address: 91fz9NNLfbgYyAQFyFvbj9YSUAMvefRhZkD7uyu8uYy8
+Current balance: 0.0 SOL
+Balance too low. Requesting airdrop...
+Requesting 2.0 SOL airdrop (attempt 1/5)...
+Airdrop requested. Signature: 48JBSKZTkyMxSwfxctsbydvCKrbu6MajyXWtwWNdL56LX4NhipWStCeax251eS4m9gfjtWoQTx4KZoSSdxVfsyD2
+Airdrop confirmed!
+New balance: 2.0 SOL
+Agent A initialized successfully!
+
+[Agent B]
+
+================================================================================
+  AGENT B INITIALIZATION
+================================================================================
+Loading existing wallet from wallets/agent_b.json
+Wallet address: 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+Current balance: 1.0 SOL
+Agent B initialized successfully!
+Ready to provide services: ['hash']
+Agent B address set: 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+
+✓ Both agents initialized and connected!
+
+================================================================================
+  STEP 2: AGENT A REQUESTS SERVICE
+================================================================================
+
+[Agent A] Requesting service...
+
+================================================================================
+  REQUESTING SERVICE FROM AGENT B
+================================================================================
+Service Type: hash
+Input Data: hello_solana_hackathon
+Payment Amount: 0.1 SOL
+
+Sending 0.1 SOL to 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+Memo: REQUEST:hash:hello_solana_hackathon
+
+================================================================================
+  DEMO FAILED
+================================================================================
+Error: SendTransactionPreflightFailureMessage { message: "Transaction simulation failed: Attempt to debit an account but found no record of a prior credit.", data: RpcSimulateTransactionResult(RpcSimulateTransactionResult { err: Some(AccountNotFound), logs: Some([]), accounts: None, units_consumed: Some(0), return_data: None, inner_instructions: None, replacement_blockhash: None }) }
+Traceback (most recent call last):
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/demo.py", line 227, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.11/asyncio/runners.py", line 188, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/runners.py", line 120, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/demo.py", line 223, in main
+    await demo.run()
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/demo.py", line 50, in run
+    request_signature = await self.agent_a_request_service()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/demo.py", line 106, in agent_a_request_service
+    signature = await self.agent_a.request_service(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/agent_a.py", line 82, in request_service
+    signature, memo_content = await self.solana_client.send_transaction_with_memo(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/utils.py", line 137, in send_transaction_with_memo
+    response = await self.client.send_transaction(transaction)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/solana/rpc/async_api.py", line 1018, in send_transaction
+    return await self.send_raw_transaction(bytes(txn), opts=opts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/solana/rpc/async_api.py", line 988, in send_raw_transaction
+    resp = await self._provider.make_request(body, SendTransactionResp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/solana/exceptions.py", line 60, in argument_decorator
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/solana/rpc/providers/async_http.py", line 62, in make_request
+    return _parse_raw(raw, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/solana/rpc/providers/core.py", line 98, in _parse_raw
+    raise RPCException(parsed)
+solana.rpc.core.RPCException: SendTransactionPreflightFailureMessage { message: "Transaction simulation failed: Attempt to debit an account but found no record of a prior credit.", data: RpcSimulateTransactionResult(RpcSimulateTransactionResult { err: Some(AccountNotFound), logs: Some([]), accounts: None, units_consumed: Some(0), return_data: None, inner_instructions: None, replacement_blockhash: None }) }

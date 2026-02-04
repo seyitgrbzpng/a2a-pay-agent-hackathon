@@ -1,0 +1,16 @@
+[
+  {
+    "type": "service_request",
+    "signature": "hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ",
+    "memo": "REQUEST:hash:hello_solana_hackathon",
+    "amount": 0.1,
+    "recipient": "3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW"
+  },
+  {
+    "type": "verification_proof",
+    "signature": "4Qeqo3dj1wc9PifkutbuWNKHSChtuqmNoZj2r5s7QZKWHvSsE92fZokA5551PSSbqpnB18cNxfcaszSq8xkT7apF",
+    "memo": "PROOF:verified:3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT",
+    "verified": true,
+    "reference_tx": "3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT"
+  }
+]

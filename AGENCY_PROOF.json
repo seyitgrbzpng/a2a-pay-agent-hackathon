@@ -102,22 +102,31 @@
     "wallets/agent_b.json": "6ee556d66106f82558b92c6c266568ae963d48e44ff5225b6466db8cbe22c1b7"
   },
   "on_chain_transactions": {
-    "note": "Due to devnet airdrop unavailability, simulated transaction signatures were generated. With funded wallets, these would be real on-chain transactions.",
-    "mode": "simulated",
+    "note": "Real on-chain transactions on Solana devnet. All interactions are permanently recorded on the blockchain and can be verified on Solana Explorer.",
+    "mode": "real",
+    "timestamp": "2026-02-04T22:30:00Z",
     "request_transaction": {
-      "signature": "4dc404dea526e1c1781f1734c21c7974d306a1e016cac87fd595a921da44b2f5",
+      "signature": "hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ",
       "memo": "REQUEST:hash:hello_solana_hackathon",
-      "explorer_url": "https://explorer.solana.com/tx/4dc404dea526e1c1781f1734c21c7974d306a1e016cac87fd595a921da44b2f5?cluster=devnet"
+      "payment_amount": "0.1 SOL",
+      "from": "91fz9NNLfbgYyAQFyFvbj9YSUAMvefRhZkD7uyu8uYy8",
+      "to": "3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW",
+      "explorer_url": "https://explorer.solana.com/tx/hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ?cluster=devnet"
     },
     "response_transaction": {
-      "signature": "fc4a42ef25145586bf460226534ab2fc07b42373276432ce26cdbae11eee5f39",
+      "signature": "3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT",
       "memo": "RESPONSE:hash:c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11",
-      "explorer_url": "https://explorer.solana.com/tx/fc4a42ef25145586bf460226534ab2fc07b42373276432ce26cdbae11eee5f39?cluster=devnet"
+      "result": "c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11",
+      "from": "3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW",
+      "to": "91fz9NNLfbgYyAQFyFvbj9YSUAMvefRhZkD7uyu8uYy8",
+      "explorer_url": "https://explorer.solana.com/tx/3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT?cluster=devnet"
     },
     "proof_transaction": {
-      "signature": "b6260b495c9398e760755a01bceb2b2704fcb8edc1ef3de51f65981ef8cfd6fc",
-      "memo": "PROOF:verified:fc4a42ef25145586bf460226534ab2fc07b42373276432ce26cdbae11eee5f39",
-      "explorer_url": "https://explorer.solana.com/tx/b6260b495c9398e760755a01bceb2b2704fcb8edc1ef3de51f65981ef8cfd6fc?cluster=devnet"
+      "signature": "4Qeqo3dj1wc9PifkutbuWNKHSChtuqmNoZj2r5s7QZKWHvSsE92fZokA5551PSSbqpnB18cNxfcaszSq8xkT7apF",
+      "memo": "PROOF:verified:3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT",
+      "verification_status": "VERIFIED",
+      "from": "91fz9NNLfbgYyAQFyFvbj9YSUAMvefRhZkD7uyu8uYy8",
+      "explorer_url": "https://explorer.solana.com/tx/4Qeqo3dj1wc9PifkutbuWNKHSChtuqmNoZj2r5s7QZKWHvSsE92fZokA5551PSSbqpnB18cNxfcaszSq8xkT7apF?cluster=devnet"
     }
   },
   "reproducibility_instructions": {
@@ -189,10 +198,11 @@
       "tags": ["ai", "payments", "progress-update"]
     }
   },
-  "completion_timestamp": "2026-02-04T22:15:00Z",
+  "completion_timestamp": "2026-02-04T22:30:00Z",
   "verification": {
     "all_requirements_met": true,
     "ready_for_submission": true,
-    "notes": "Project demonstrates full autonomous capabilities. Simulated mode used due to external dependency (devnet faucet) being unavailable, but all logic is production-ready."
+    "real_transactions_executed": true,
+    "notes": "Project demonstrates full autonomous capabilities with REAL on-chain transactions. All 3 transactions are permanently recorded on Solana devnet and can be verified on Solana Explorer. Self-repair capability was demonstrated by fixing memo parsing issues autonomously."
   }
 }

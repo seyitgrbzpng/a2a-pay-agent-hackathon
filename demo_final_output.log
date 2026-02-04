@@ -1,0 +1,96 @@
+
+================================================================================
+  A2A SERVICE PURCHASE DEMO - START
+================================================================================
+Demonstrating autonomous agent-to-agent interaction on Solana devnet
+Service: SHA256 Hash Generation
+Payment: 0.1 SOL on devnet
+
+================================================================================
+  STEP 1: INITIALIZE AGENTS
+================================================================================
+
+[Agent A]
+
+================================================================================
+  AGENT A INITIALIZATION
+================================================================================
+Loading existing wallet from wallets/agent_a.json
+Wallet address: 91fz9NNLfbgYyAQFyFvbj9YSUAMvefRhZkD7uyu8uYy8
+Current balance: 1.89999 SOL
+Agent A initialized successfully!
+
+[Agent B]
+
+================================================================================
+  AGENT B INITIALIZATION
+================================================================================
+Loading existing wallet from wallets/agent_b.json
+Wallet address: 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+Current balance: 1.099995 SOL
+Agent B initialized successfully!
+Ready to provide services: ['hash']
+Agent B address set: 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+
+✓ Both agents initialized and connected!
+
+================================================================================
+  STEP 2: AGENT A REQUESTS SERVICE
+================================================================================
+
+[Agent A] Requesting service...
+
+================================================================================
+  REQUESTING SERVICE FROM AGENT B
+================================================================================
+Service Type: hash
+Input Data: hello_solana_hackathon
+Payment Amount: 0.1 SOL
+
+Sending 0.1 SOL to 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+Memo: REQUEST:hash:hello_solana_hackathon
+Transaction sent. Signature: bwV9ERG4746yPksFYK2KMPZedH78fhC7Z8daizQym3DD1nVHQtd6675bBpBRfTMomUK2o1bTfYsbkNVecK7hpQK
+Transaction confirmed!
+
+✓ Service request sent successfully!
+Transaction: https://explorer.solana.com/tx/bwV9ERG4746yPksFYK2KMPZedH78fhC7Z8daizQym3DD1nVHQtd6675bBpBRfTMomUK2o1bTfYsbkNVecK7hpQK?cluster=devnet
+
+================================================================================
+  STEP 3: AGENT B PROCESSES REQUEST
+================================================================================
+
+[Agent B] Processing service request...
+
+================================================================================
+  PROCESSING SERVICE REQUEST
+================================================================================
+Request Transaction: bwV9ERG4746yPksFYK2KMPZedH78fhC7Z8daizQym3DD1nVHQtd6675bBpBRfTMomUK2o1bTfYsbkNVecK7hpQK
+✗ Could not retrieve memo from request transaction
+
+================================================================================
+  DEMO FAILED
+================================================================================
+Error: No memo found in request transaction
+Traceback (most recent call last):
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/demo.py", line 227, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.11/asyncio/runners.py", line 188, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/runners.py", line 120, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/demo.py", line 223, in main
+    await demo.run()
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/demo.py", line 53, in run
+    response_signature = await self.agent_b_process_request(request_signature)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/demo.py", line 126, in agent_b_process_request
+    response_signature = await self.agent_b.process_service_request(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/a2a-pay-agent-hackathon/agent_output/agent_b.py", line 78, in process_service_request
+    raise Exception("No memo found in request transaction")
+Exception: No memo found in request transaction

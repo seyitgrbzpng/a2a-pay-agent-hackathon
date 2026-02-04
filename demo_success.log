@@ -1,0 +1,170 @@
+
+================================================================================
+  A2A SERVICE PURCHASE DEMO - START
+================================================================================
+Demonstrating autonomous agent-to-agent interaction on Solana devnet
+Service: SHA256 Hash Generation
+Payment: 0.1 SOL on devnet
+
+================================================================================
+  STEP 1: INITIALIZE AGENTS
+================================================================================
+
+[Agent A]
+
+================================================================================
+  AGENT A INITIALIZATION
+================================================================================
+Loading existing wallet from wallets/agent_a.json
+Wallet address: 91fz9NNLfbgYyAQFyFvbj9YSUAMvefRhZkD7uyu8uYy8
+Current balance: 1.799985 SOL
+Agent A initialized successfully!
+
+[Agent B]
+
+================================================================================
+  AGENT B INITIALIZATION
+================================================================================
+Loading existing wallet from wallets/agent_b.json
+Wallet address: 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+Current balance: 1.199995 SOL
+Agent B initialized successfully!
+Ready to provide services: ['hash']
+Agent B address set: 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+
+✓ Both agents initialized and connected!
+
+================================================================================
+  STEP 2: AGENT A REQUESTS SERVICE
+================================================================================
+
+[Agent A] Requesting service...
+
+================================================================================
+  REQUESTING SERVICE FROM AGENT B
+================================================================================
+Service Type: hash
+Input Data: hello_solana_hackathon
+Payment Amount: 0.1 SOL
+
+Sending 0.1 SOL to 3JqgszLcugbyj6YEWebaPXKuxYA5ZB8oH4zSgTkAEVmW
+Memo: REQUEST:hash:hello_solana_hackathon
+Transaction sent. Signature: hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ
+Transaction confirmed!
+
+✓ Service request sent successfully!
+Transaction: https://explorer.solana.com/tx/hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ?cluster=devnet
+
+================================================================================
+  STEP 3: AGENT B PROCESSES REQUEST
+================================================================================
+
+[Agent B] Processing service request...
+
+================================================================================
+  PROCESSING SERVICE REQUEST
+================================================================================
+Request Transaction: hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ
+Request Memo: REQUEST:hash:hello_solana_hackathon
+Service Type: hash
+Input Data: hello_solana_hackathon
+
+Verifying payment...
+Current balance: 1.299995 SOL
+✓ Payment verified (transaction exists on-chain)
+
+================================================================================
+  EXECUTING SERVICE
+================================================================================
+Service Type: hash
+Input: hello_solana_hackathon
+Result: c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11
+
+✓ Service executed successfully!
+
+================================================================================
+  SENDING SERVICE RESULT
+================================================================================
+Sending result to: 91fz9NNLfbgYyAQFyFvbj9YSUAMvefRhZkD7uyu8uYy8
+Response Memo: RESPONSE:hash:c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11
+
+Sending 0.001 SOL to 91fz9NNLfbgYyAQFyFvbj9YSUAMvefRhZkD7uyu8uYy8
+Memo: RESPONSE:hash:c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11
+Transaction sent. Signature: 3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT
+Transaction confirmed!
+
+✓ Service result sent!
+Response Transaction: https://explorer.solana.com/tx/3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT?cluster=devnet
+
+================================================================================
+  STEP 4: AGENT A VERIFIES RESULT
+================================================================================
+
+[Agent A] Verifying service result...
+
+================================================================================
+  VERIFYING SERVICE RESULT
+================================================================================
+Response Transaction: 3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT
+Response Memo: RESPONSE:hash:c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11
+Service Type: hash
+Result: c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11
+Expected Hash: c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11
+
+✓ Verification PASSED! Result is correct.
+
+================================================================================
+  STEP 5: AGENT A PUBLISHES PROOF
+================================================================================
+
+[Agent A] Publishing verification proof...
+
+================================================================================
+  PUBLISHING VERIFICATION PROOF
+================================================================================
+Proof Status: VERIFIED
+Reference Transaction: 3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT
+
+Publishing memo: PROOF:verified:3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT
+Memo published. Signature: 4Qeqo3dj1wc9PifkutbuWNKHSChtuqmNoZj2r5s7QZKWHvSsE92fZokA5551PSSbqpnB18cNxfcaszSq8xkT7apF
+Memo transaction confirmed!
+
+✓ Verification proof published on-chain!
+Proof Transaction: https://explorer.solana.com/tx/4Qeqo3dj1wc9PifkutbuWNKHSChtuqmNoZj2r5s7QZKWHvSsE92fZokA5551PSSbqpnB18cNxfcaszSq8xkT7apF?cluster=devnet
+
+================================================================================
+  STEP 6: SAVE RESULTS
+================================================================================
+
+Transaction log saved to logs/agent_a_transactions.json
+
+Transaction log saved to logs/agent_b_transactions.json
+Demo results saved to logs/demo_results.json
+
+================================================================================
+  A2A SERVICE PURCHASE DEMO - COMPLETE
+================================================================================
+
+================================================================================
+  DEMO SUMMARY
+================================================================================
+
+✓ Demo Status: SUCCESS
+
+Transaction Chain:
+  1. Service Request:  hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ
+     https://explorer.solana.com/tx/hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ?cluster=devnet
+
+  2. Service Response: 3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT
+     https://explorer.solana.com/tx/3JpNvrPYtJjdKY9ZFVCiYdkPL1bc666Fp9Bxs2Y2NDECyRkL1XBaNNbhksjJVCmDJ6hSsu5t3TNZipb2c9i4a6uT?cluster=devnet
+
+  3. Verification Proof: 4Qeqo3dj1wc9PifkutbuWNKHSChtuqmNoZj2r5s7QZKWHvSsE92fZokA5551PSSbqpnB18cNxfcaszSq8xkT7apF
+     https://explorer.solana.com/tx/4Qeqo3dj1wc9PifkutbuWNKHSChtuqmNoZj2r5s7QZKWHvSsE92fZokA5551PSSbqpnB18cNxfcaszSq8xkT7apF?cluster=devnet
+
+Verification Result: ✓ VERIFIED
+
+================================================================================
+All transactions are permanently recorded on Solana devnet blockchain.
+This demonstrates cryptographic proof of agent-to-agent interaction.
+================================================================================
+

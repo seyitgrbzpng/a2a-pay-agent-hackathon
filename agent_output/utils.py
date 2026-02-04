@@ -199,8 +199,12 @@ class SolanaClient:
         Returns the memo string if found, None otherwise
         """
         try:
+            from solders.signature import Signature
+            # Convert string to Signature object
+            sig = Signature.from_string(signature) if isinstance(signature, str) else signature
+            
             response = await self.client.get_transaction(
-                signature,
+                sig,
                 encoding="jsonParsed",
                 commitment=Confirmed,
                 max_supported_transaction_version=0
@@ -208,14 +212,32 @@ class SolanaClient:
             
             if response.value and response.value.transaction:
                 tx = response.value.transaction
+                # Handle EncodedTransactionWithStatusMeta structure
+                if hasattr(tx, 'transaction'):
+                    tx = tx.transaction
+                
                 if hasattr(tx, 'message') and hasattr(tx.message, 'instructions'):
                     for ix in tx.message.instructions:
                         # Check if this is a memo instruction
-                        if hasattr(ix, 'program_id'):
-                            if str(ix.program_id) == str(self.MEMO_PROGRAM_ID):
-                                if hasattr(ix, 'data'):
-                                    # Data is the memo text
-                                    return ix.data.decode('utf-8') if isinstance(ix.data, bytes) else ix.data
+                        # In jsonParsed format, check program attribute
+                        is_memo = False
+                        if hasattr(ix, 'program') and ix.program == 'spl-memo':
+                            is_memo = True
+                        elif hasattr(ix, 'program_id') and str(ix.program_id) == str(self.MEMO_PROGRAM_ID):
+                            is_memo = True
+                        elif hasattr(ix, 'programId') and str(ix.programId) == str(self.MEMO_PROGRAM_ID):
+                            is_memo = True
+                        
+                        if is_memo:
+                            # Try parsed format first
+                            if hasattr(ix, 'parsed') and isinstance(ix.parsed, str):
+                                return ix.parsed
+                            # Try data field
+                            if hasattr(ix, 'data'):
+                                if isinstance(ix.data, bytes):
+                                    return ix.data.decode('utf-8')
+                                elif isinstance(ix.data, str):
+                                    return ix.data
             return None
         except Exception as e:
             print(f"Error retrieving transaction memo: {e}")
