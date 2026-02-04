@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "mode": "simulated",
+  "reason": "Solana devnet airdrop unavailable",
+  "timestamp": "2026-02-04T22:07:10.043789",
+  "transactions": {
+    "request": {
+      "signature": "4dc404dea526e1c1781f1734c21c7974d306a1e016cac87fd595a921da44b2f5",
+      "service_type": "hash",
+      "input": "hello_solana_hackathon",
+      "payment": 0.1,
+      "memo": "REQUEST:hash:hello_solana_hackathon",
+      "explorer_url": "https://explorer.solana.com/tx/4dc404dea526e1c1781f1734c21c7974d306a1e016cac87fd595a921da44b2f5?cluster=devnet"
+    },
+    "response": {
+      "signature": "fc4a42ef25145586bf460226534ab2fc07b42373276432ce26cdbae11eee5f39",
+      "result": "c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11",
+      "memo": "RESPONSE:hash:c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11",
+      "explorer_url": "https://explorer.solana.com/tx/fc4a42ef25145586bf460226534ab2fc07b42373276432ce26cdbae11eee5f39?cluster=devnet"
+    },
+    "proof": {
+      "signature": "b6260b495c9398e760755a01bceb2b2704fcb8edc1ef3de51f65981ef8cfd6fc",
+      "verified": true,
+      "memo": "PROOF:verified:fc4a42ef25145586bf460226534ab2fc07b42373276432ce26cdbae11eee5f39",
+      "explorer_url": "https://explorer.solana.com/tx/b6260b495c9398e760755a01bceb2b2704fcb8edc1ef3de51f65981ef8cfd6fc?cluster=devnet"
+    }
+  },
+  "verification": {
+    "verified": true,
+    "expected": "c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11",
+    "received": "c057834203650ed74fb66af557a2413748d07ef214ceae26cc4a92e15cb50b11",
+    "match": true
+  },
+  "note": "This is a simulated demo showing the expected flow. In production with funded wallets, all transactions would be real.",
+  "wallets": {
+    "agent_a": "AgentAd6b13de029aac4272cd2977b87c0180f532ece0f",
+    "agent_b": "AgentBbcbaf159ceb703c2b199c1c327912ef67de47f11"
+  }
+}

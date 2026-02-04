@@ -1,0 +1,169 @@
+================================================================================
+AUTONOMOUS AGENT TASK PLANNER
+Colosseum Agent Hackathon - A2A Service Purchase Demo
+================================================================================
+Timestamp: 2026-02-05 00:01:00 GMT+3
+Agent: Manus Autonomous AI Agent
+Goal: Build agent-to-agent service purchase demo on Solana devnet
+
+================================================================================
+PHASE 1: PROJECT INITIALIZATION AND PLANNING
+================================================================================
+Status: IN PROGRESS
+Started: 2026-02-05 00:01:00
+
+Tasks:
+[✓] 1.1 Read and parse master prompt instructions
+[✓] 1.2 Clone GitHub repository: seyitgrbzpng/a2a-pay-agent-hackathon
+[✓] 1.3 Create required directory structure:
+    - /agent_output (for Agent A and Agent B source code)
+    - /logs (for planner.log, executor.log, verifier.log)
+    - /report (for final_report.md)
+    - /demo (for demo execution script)
+[IN PROGRESS] 1.4 Document autonomous task plan in logs/planner.log
+
+================================================================================
+PHASE 2: RESEARCH AND ARCHITECTURE DESIGN
+================================================================================
+Status: PENDING
+
+Tasks:
+[ ] 2.1 Research Solana devnet setup and wallet creation
+[ ] 2.2 Research Solana Memo Program for proof publishing
+[ ] 2.3 Research Solana web3.js or Python SDK options
+[ ] 2.4 Design Agent A architecture (requester, payer, verifier)
+[ ] 2.5 Design Agent B architecture (service provider, receiver)
+[ ] 2.6 Define service contract (what service will be provided)
+[ ] 2.7 Define payment flow and verification mechanism
+[ ] 2.8 Document architecture decisions in executor.log
+
+Technology Stack Decision:
+- Language: Python (robust, well-documented Solana libraries)
+- Solana SDK: solana-py (official Python SDK)
+- Payment: Direct SOL transfer on devnet
+- Proof: Solana Memo Program for cryptographic proof
+- Service: Simple text processing service (e.g., text reversal or hash generation)
+
+================================================================================
+PHASE 3: IMPLEMENTATION
+================================================================================
+Status: PENDING
+
+Tasks:
+[ ] 3.1 Install Solana CLI tools and Python dependencies
+[ ] 3.2 Create Solana devnet wallets for Agent A and Agent B
+[ ] 3.3 Request devnet SOL airdrop for Agent A
+[ ] 3.4 Implement Agent A:
+    - Service request generation
+    - Payment transaction creation and signing
+    - Result verification logic
+    - Proof publishing to chain
+[ ] 3.5 Implement Agent B:
+    - Service request listening/receiving
+    - Payment verification
+    - Service execution (text processing)
+    - Result return mechanism
+[ ] 3.6 Implement shared utilities:
+    - Wallet management
+    - Transaction helpers
+    - Memo program integration
+[ ] 3.7 Test individual components
+[ ] 3.8 Document implementation steps in executor.log
+
+================================================================================
+PHASE 4: DEMO CREATION AND END-TO-END TESTING
+================================================================================
+Status: PENDING
+
+Tasks:
+[ ] 4.1 Create demo/run_demo.sh script
+[ ] 4.2 Implement full A2A flow orchestration
+[ ] 4.3 Execute end-to-end test
+[ ] 4.4 Capture transaction hashes and proofs
+[ ] 4.5 Verify on-chain data
+[ ] 4.6 Document test results in executor.log
+
+================================================================================
+PHASE 5: SELF-VERIFICATION AND ERROR CORRECTION
+================================================================================
+Status: PENDING
+
+Tasks:
+[ ] 5.1 Verify all required outputs exist
+[ ] 5.2 Verify code quality and completeness
+[ ] 5.3 Verify transaction success on devnet
+[ ] 5.4 Test demo script execution
+[ ] 5.5 Identify and fix any errors (demonstrate self-repair)
+[ ] 5.6 Document verification steps and fixes in verifier.log
+
+Expected Self-Repair Scenarios:
+- Dependency installation issues
+- Wallet funding issues (retry airdrop)
+- Transaction failures (retry logic)
+- Network connectivity issues
+
+================================================================================
+PHASE 6: FINAL DOCUMENTATION
+================================================================================
+Status: PENDING
+
+Tasks:
+[ ] 6.1 Generate final_report.md with complete explanation
+[ ] 6.2 Generate AGENCY_PROOF.json with:
+    - Goal statement
+    - Autonomous plan
+    - Tools used
+    - Failures and fixes
+    - File hashes of all artifacts
+    - On-chain transaction hashes
+    - Reproducibility instructions
+[ ] 6.3 Update README.md with project overview
+[ ] 6.4 Document completion in executor.log
+
+================================================================================
+PHASE 7: REPOSITORY COMMIT
+================================================================================
+Status: PENDING
+
+Tasks:
+[ ] 7.1 Verify all outputs are complete
+[ ] 7.2 Stage all generated files
+[ ] 7.3 Create single final commit with exact message:
+    "Autonomous agent-generated submission for Colosseum Agent Hackathon"
+[ ] 7.4 Push to repository
+[ ] 7.5 Document commit in executor.log
+
+================================================================================
+AUTONOMY PRINCIPLES
+================================================================================
+1. No human intervention in code generation
+2. Self-planning: This document demonstrates autonomous planning
+3. Self-verification: Phase 5 dedicated to verification
+4. Self-repair: Error detection and correction built into each phase
+5. Full auditability: All steps logged in detail
+
+================================================================================
+SUCCESS CRITERIA
+================================================================================
+[✓] Task plan created and documented
+[ ] Agent A and Agent B implemented
+[ ] Payment transaction successful on Solana devnet
+[ ] Service delivered and verified
+[ ] Cryptographic proof published on-chain
+[ ] All required outputs generated
+[ ] Single commit with exact message
+[ ] Full reproducibility demonstrated
+
+================================================================================
+RISK MITIGATION
+================================================================================
+- Network issues: Retry logic with exponential backoff
+- Airdrop failures: Multiple airdrop attempts, fallback to manual funding
+- Transaction failures: Transaction simulation before submission
+- Dependency issues: Pin versions, use virtual environment
+- Code errors: Comprehensive error handling and logging
+
+================================================================================
+END OF PLANNING PHASE
+================================================================================
+Next: Begin Phase 2 - Research and Architecture Design
