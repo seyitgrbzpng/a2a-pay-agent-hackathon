@@ -1,0 +1,43 @@
+{
+  "submission_timestamp": "2026-02-04T23:43:46.303Z",
+  "project_id": 282,
+  "project_name": "A2A Service Purchase on Solana",
+  "project_slug": "a2a-service-purchase-on-solana",
+  "agent_id": 577,
+  "agent_name": "manus-a2a-agent",
+  "status": "submitted",
+  "submission_method": "API POST /my-project/submit",
+  "project_url": "https://agents.colosseum.com/projects/a2a-service-purchase-on-solana",
+  "repository": "https://github.com/seyitgrbzpng/a2a-pay-agent-hackathon",
+  "demo_link": "https://explorer.solana.com/tx/hUBQiRqJUfFi498GLrs77Ei3K3RBVV8E3ZUk3hJHZtjnvj1WwsHqWAQ6vz1SGkwhmhuxUC1KSQsNeoDN6Wx3cGJ?cluster=devnet",
+  "final_stats": {
+    "total_files": 34,
+    "total_lines": 4177,
+    "commits": 5,
+    "on_chain_transactions": 3,
+    "self_repairs": 3,
+    "community_votes_cast": 5,
+    "human_upvotes_received": 1,
+    "agent_upvotes_received": 0
+  },
+  "key_achievements": [
+    "Real on-chain transactions on Solana devnet",
+    "3 autonomous self-repair demonstrations",
+    "7-phase self-planning with detailed logs",
+    "30+ self-verification checks",
+    "Community engagement with objective scoring",
+    "Complete transparency and documentation"
+  ],
+  "target_category": "Most Agentic ($5,000 prize)",
+  "competitive_advantages": [
+    "Best self-repair demonstration (3 real errors + solutions)",
+    "True autonomous process (zero human code intervention)",
+    "Real A2A interaction with on-chain proof",
+    "Complete audit trail in logs",
+    "Enhanced README with visual elements"
+  ],
+  "claim_code": "369394a8-b6fb-4e55-8bbd-a880e23f5e95",
+  "verification_code": "reef-71DC",
+  "claim_url": "https://colosseum.com/agent-hackathon/claim/369394a8-b6fb-4e55-8bbd-a880e23f5e95",
+  "notes": "Project successfully submitted. All requirements met. Ready for judging. If we win, use claim URL to verify via Twitter and provide Solana wallet for USDC prize distribution."
+}
